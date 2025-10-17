@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  chatbot:
+    build: .
+    container_name: ai-customer-support-chatbot
+    ports:
+      - "7860:7860"
+    volumes:
+      - ./data:/app/data
+      - ./chroma_db:/app/chroma_db
+      - ./logs:/app/logs
+      - ./config:/app/config
+    environment:
+      - OLLAMA_BASE_URL=http://ollama:11434
+      - MODEL_NAME=gpt-oss:20b
+      - CHROMA_PERSIST_DIR=/app/chroma_db
+      - GRADIO_SERVER_PORT=7860
+      - GRADIO_SERVER_NAME=0.0.0.0
+    depends_on:
+      - ollama
+    restart: unless-stopped
+    networks:
+      - chatbot-network
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama-server
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    restart: unless-stopped
+    networks:
+      - chatbot-network
+
+volumes:
+  ollama_data:
+    driver: local
+
+networks:
+  chatbot-network:
+    driver: bridge
+

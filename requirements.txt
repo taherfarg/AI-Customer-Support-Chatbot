@@ -1,0 +1,26 @@
+# Core RAG Dependencies
+chromadb==0.4.22
+sentence-transformers==2.3.1
+langchain>=0.1.9
+langchain-community>=0.0.21
+
+# LLM Integration
+ollama>=0.1.6
+
+# UI
+gradio>=4.19.0
+
+# Data Processing
+pandas>=2.2.0
+numpy>=1.24.0
+
+# Utilities
+python-dotenv>=1.0.0
+tqdm>=4.66.0
+
+# Voice Integration
+speechrecognition>=3.10.0
+pyttsx3>=2.90
+gTTS>=2.5.0
+pydub>=0.25.1
+
