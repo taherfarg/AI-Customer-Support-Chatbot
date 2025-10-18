@@ -214,7 +214,8 @@ with gr.Blocks(
                 height=500,
                 elem_id="chatbot",
                 show_copy_button=True,
-                avatar_images=(None, "🤖")
+                avatar_images=(None, "🤖"),
+                type="tuples"
             )
             
             # Text Input Section
