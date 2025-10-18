@@ -1,0 +1,10 @@
+Chat Session: 20251018_122539
+Created: 2025-10-18T12:25:39.943717
+============================================================
+
+[USER] 2025-10-18T12:25:39.944047
+How do I reset my password?
+
+[ASSISTANT] 2025-10-18T12:25:39.944286
+To reset your password, visit the settings page...
+

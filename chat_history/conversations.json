@@ -1,0 +1,20 @@
+{
+  "20251018_122539": {
+    "created_at": "2025-10-18T12:25:39.943717",
+    "messages": [
+      {
+        "role": "user",
+        "content": "How do I reset my password?",
+        "timestamp": "2025-10-18T12:25:39.944047",
+        "metadata": {}
+      },
+      {
+        "role": "assistant",
+        "content": "To reset your password, visit the settings page...",
+        "timestamp": "2025-10-18T12:25:39.944286",
+        "metadata": {}
+      }
+    ],
+    "metadata": {}
+  }
+}
