@@ -10,6 +10,47 @@
 
 **Production-ready AI-powered customer support chatbot with RAG, streaming responses, conversation context, and chat history**
 
+[Features](#-features) • [Quick Start](#-quick-start) • [Demo](#-demo) • [Documentation](#-documentation)
+
+</div>
+
+---
+
+## 🎬 Demo
+
+<div align="center">
+
+### 💬 Chatbot Interface in Action
+
+<img src="Screenshot 2025-10-18 125202.png" alt="AI Customer Support Chatbot Interface" width="800"/>
+
+*The chatbot provides intelligent, context-aware responses based on 768K+ real customer support conversations*
+
+### ✨ Key Features Demo
+
+<table>
+  <tr>
+    <td width="50%">
+      <h4>🔄 Real-time Streaming Responses</h4>
+      <p>Watch AI responses appear word-by-word in real-time</p>
+    </td>
+    <td width="50%">
+      <h4>💬 Multi-turn Conversations</h4>
+      <p>Context-aware follow-up questions</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h4>👍👎 Response Feedback</h4>
+      <p>Rate responses to track quality</p>
+    </td>
+    <td width="50%">
+      <h4>💾 Chat History</h4>
+      <p>Save and export conversations</p>
+    </td>
+  </tr>
+</table>
+
 </div>
 
 ---
