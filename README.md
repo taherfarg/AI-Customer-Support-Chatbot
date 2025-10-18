@@ -22,7 +22,7 @@
 
 ### 💬 Chatbot Interface in Action
 
-<img src="Screenshot 2025-10-18 125202.png" alt="AI Customer Support Chatbot Interface" width="800"/>
+<img src="\images\chatbot-interface.png" alt="AI Customer Support Chatbot Interface" width="800"/>
 
 *The chatbot provides intelligent, context-aware responses based on 768K+ real customer support conversations*
 
