@@ -135,7 +135,10 @@ def add_feedback(history, feedback_type):
         history: Chat history
         feedback_type: 'positive' or 'negative'
     """
-    global current_session_id
+    global current_session_id, chat_manager
+    
+    if chat_manager is None:
+        return "[ERROR] Chatbot not initialized yet"
     
     if not history or len(history) == 0:
         return "[WARN] No messages to give feedback on"
@@ -166,7 +169,10 @@ def load_session(session_id):
     Returns:
         Updated history
     """
-    global current_session_id
+    global current_session_id, chat_manager
+    
+    if chat_manager is None:
+        return [], "[ERROR] Chatbot not initialized yet"
     
     try:
         conversation = chat_manager.get_conversation(session_id)
@@ -191,7 +197,10 @@ def load_session(session_id):
 
 def new_session():
     """Create a new chat session"""
-    global current_session_id
+    global current_session_id, chat_manager
+    
+    if chat_manager is None:
+        return [], "[ERROR] Chatbot not initialized yet"
     
     try:
         current_session_id = chat_manager.create_session()
@@ -209,7 +218,10 @@ def export_chat(format_type):
     Returns:
         Status message
     """
-    global current_session_id
+    global current_session_id, chat_manager
+    
+    if chat_manager is None:
+        return "[ERROR] Chatbot not initialized yet"
     
     try:
         export_file = chat_manager.export_conversation(current_session_id, format_type)
@@ -222,6 +234,11 @@ def export_chat(format_type):
 
 def get_sessions_list():
     """Get list of all chat sessions"""
+    global chat_manager
+    
+    if chat_manager is None:
+        return "[ERROR] Chatbot not initialized yet"
+    
     try:
         sessions = chat_manager.get_all_sessions()
         if not sessions:
@@ -240,6 +257,11 @@ def get_sessions_list():
 
 def get_feedback_stats():
     """Get feedback statistics"""
+    global chat_manager
+    
+    if chat_manager is None:
+        return "[ERROR] Chatbot not initialized yet"
+    
     try:
         stats = chat_manager.get_feedback_stats()
         
@@ -282,7 +304,8 @@ with gr.Blocks(
             chatbot = gr.Chatbot(
                 label="Chat History",
                 height=500,
-                elem_id="chatbot"
+                elem_id="chatbot",
+                type="tuples"
             )
             
             # Chat Input

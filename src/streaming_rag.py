@@ -62,13 +62,12 @@ class StreamingRAGChatbot:
         collection_count = self.vectorstore._collection.count()
         print(f"Vector store loaded: {collection_count:,} documents")
         
-        # Initialize Ollama LLM with streaming
+        # Initialize Ollama LLM
         print(f"Connecting to Ollama: {OLLAMA_MODEL}")
         self.llm = Ollama(
             model=OLLAMA_MODEL,
             base_url=OLLAMA_BASE_URL,
-            temperature=0.7,
-            streaming=True  # Enable streaming
+            temperature=0.7
         )
         
         # Create retriever

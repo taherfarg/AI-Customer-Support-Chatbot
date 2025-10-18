@@ -16,5 +16,23 @@
       }
     ],
     "metadata": {}
+  },
+  "20251018_125052": {
+    "created_at": "2025-10-18T12:50:52.941332",
+    "messages": [
+      {
+        "role": "user",
+        "content": "hi",
+        "timestamp": "2025-10-18T12:51:13.646592",
+        "metadata": {}
+      },
+      {
+        "role": "assistant",
+        "content": "Hello! 👋 How can we help you today?  \nIf you have a booking number, order ID, or any details about the issue, please share them so we can assist you more quickly. If you’re unsure, just let us know what you’re looking for and we’ll guide you from there.",
+        "timestamp": "2025-10-18T12:51:34.689644",
+        "metadata": {}
+      }
+    ],
+    "metadata": {}
   }
 }
